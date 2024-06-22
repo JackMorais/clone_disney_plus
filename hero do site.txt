@@ -1,0 +1,17 @@
+- Criar o Hero do projeto
+depois de separa as imagens e logo do projeto
+- no terminal instalar o plugin image mn
+npm install --save-dev gulp-imagemin@7.1.0
+
+- depois a configuração d plugin criando uma nova função 
+const imagemin = require(gulp-imagemin');
+
+function images(){
+    return gulp.src('./src/images/**/*')
+              .pipe(imagemin())
+             .pipe(gulp.dest('./dist/images'));
+}
+
+exports.default = gulp.parallel(styles, images);
+
+- no teminal npm run build

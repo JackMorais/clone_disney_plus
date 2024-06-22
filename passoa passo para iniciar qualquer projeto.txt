@@ -1,0 +1,76 @@
+fazer do zero o projeto
+
+Projeto Disney+
+
+- criar um repositorio no github
+- no repositorio criado clonar o repositorio vaziu 
+- no terminal clonar o repositorio indo a página do projeto
+e git clone e o endereço copiado
+depois na pasta do projeto abrir o vscode
+
+- no terminal npm init --yes
+- no terminal instalar o gulp e o gulp-sass
+npm install --save-dev gulp gulp-sass
+npm install --save-dev sass
+
+será criado arquivos
+- criar um arquivo .gitignore e colocar a pasta node_modules
+récem criada
+
+- criar arquivo gulpfile.js
+e nele criar uma function de teste 
+function testeGulp(cb){
+  console.log('OLÁ MUNDO');
+  cb();
+}
+
+exports.default = testeGulp;
+- em package.json criar um scripts 'build': 'gulp',
+no terminal npm run build
+
+- criar a pasa src/styles e o arquivo main.scss
+criar
+$bgColor: red;
+
+body{
+  background-color: $bgColor;
+}
+
+- importar o gulp e o sass
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('gulp-sass'));
+
+function styles(){
+  return gulp.src('./src/styles/*.scss')
+       .pipe(sass({outputStyle: 'compressed' }))
+.pipe(gulp.dest('./dist/css'));
+ 
+}
+
+exports.default = testeGulp;
+- no terminal npm run build
+
+será criado a pasta dist
+que será coloado no .gitignore dist
+
+- criar a função watch para executar as funçõea automaticamente 
+
+- exports.watch function(){
+            gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
+}
+- depois executa no terminal npm run build watch
+- depois criar arquivo index.html
+e importar o arquivo css
+link rel  href= 'dist/css/main.css'
+
+- no terminal finalizar a execução do gulp com ctrl+c e depois sim
+e ctrl+l limpa a tela
+acessar a pasta do projeto cd ./nomedapasta
+
+- fazer primeiro comit
+git add . 
+git commit -m 'primeiro commit'
+git push
+
+no github ctrl+r atualiza a página visualizando os arquivos enviados
+
