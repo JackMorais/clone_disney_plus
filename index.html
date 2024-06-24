@@ -7,11 +7,26 @@
     <link rel="stylesheet" href= "./dist/css/main.css">
 </head>
 <body>
+    <header class="header">
+        <div class="header__container">
+            <h1>
+                <img class="header__logo" src="./dist/images/disneyplus.svg" alt="Dysney+">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a href="#" class="button button--secondary">Assine agora</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="#" class="button button--dark">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <section class="hero">
         <div class="hero__content">
-            <h1 class="hero__content__branding">
+            <div class="hero__content__branding">
                 <img src="./dist/images/disneyplus.svg" alt="Dysney+">
-            </h1>
+            </div>
             <h3 class="title">
                 As melhores histórias em um só lugar.
             </h3>
@@ -156,6 +171,138 @@
             *O preço pode variar caso a assinatura seja feita em outras platformas.
         </p>
     </section>
+    <section class="image-text-section">
+        <img src="./dist/images/tv_pc_tablet_celular.png" alt="Imagem com tv, tablet e celular">
+        <div class="image-text-section__text__container">
+            <h2 class= "title--44">
+                Assista do seu jeito
+            </h2>
+            <p class="text--18">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor at vero nisi nihil quis magnam, praesentium nulla amet architecto perferendis. Non, fugit. Officiis laboriosam deserunt unde nihil harum dolores quas?
+
+            </p>
+        </div>
+    </section>
+    <section class="image-text-section image-text-section--image-full-width">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png"/>
+            <img src="./dist/images/fundo_rei_leao.png" alt="rei leão">
+        </picture>
+        <div class="image-text-section__text__container image-text-section--image-full-width__text__container">
+            <h2 class=title--44>
+                Assista do seu jeito
+            </h2>
+            <p class="text--18">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor at vero nisi nihil quis magnam, praesentium nulla amet architecto perferendis. Non, fugit. Officiis laboriosam deserunt unde nihil harum dolores quas?
+
+            </p>
+        </div>
+    </section>
+    <section class="available-devices">
+        <h2 class="title--44">Disponível nos seus dispositivos favoritos</h2>
+        <ul class="available-devices__list">
+            <li class="available-devices__list__item">
+                <img src="./dist/images/dispositivos/computador.png" alt="computador">
+                <h4 class="text--18">Computador</h4>
+                <ul class="text--12">
+                    <li>Chrome OS</li>
+                    <li>MacOs</li>
+                    <li>PC Windows</li>
+                </ul>
+            </li>
+            <li class="available-devices__list__item">
+                <img src="./dist/images/dispositivos/computador.png" alt="computador">
+                <h4 class="text--18">Computador</h4>
+                <ul class="text--12">
+                    <li>Chrome OS</li>
+                    <li>MacOs</li>
+                    <li>PC Windows</li>
+                </ul>
+            </li>
+            <li class="available-devices__list__item">
+                <img src="./dist/images/dispositivos/computador.png" alt="computador">
+                <h4 class="text--18">Computador</h4>
+                <ul class="text--12">
+                    <li>Chrome OS</li>
+                    <li>MacOs</li>
+                    <li>PC Windows</li>
+                </ul>
+            </li>
+            <li class="available-devices__list__item">
+                <img src="./dist/images/dispositivos/computador.png" alt="computador">
+                <h4 class="text--18">Computador</h4>
+                <ul class="text--12">
+                    <li>Chrome OS</li>
+                    <li>MacOs</li>
+                    <li>PC Windows</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="faq">
+        <h2 class="title--44">Perguntas frequentes</h2>
+        <ul class="faq__questions">
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__pergunta" data-faq-pergunta>Pergunta?</div>
+                <div class="faq__questions__item__resposta text">Resposta</div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__pergunta" data-faq-pergunta>Pergunta?</div>
+                <div class="faq__questions__item__resposta text">Resposta</div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__pergunta" data-faq-pergunta>Pergunta?</div>
+                <div class="faq__questions__item__resposta text">Resposta</div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__pergunta" data-faq-pergunta>Pergunta?</div>
+                <div class="faq__questions__item__resposta text">Resposta</div>
+            </li>
+        </ul>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <div class="language-selector">
+                        <img src="./dist/images/icones/globe.svg" alt="globo">
+                        <select>
+                            <option selected>Português</option>
+                            <option >English</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class=" text--12">Termos e condições de uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class=" text--12">Termos e condições de uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class=" text--12">Termos e condições de uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class=" text--12">Termos e condições de uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class=" text--12">Termos e condições de uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class=" text--12">Termos e condições de uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class=" text--12">Termos e condições de uso</a>
+                </li>
+            </ul>
+            <p class="text--12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus similique, quisquam harum libero quia accusantium commodi dolorum id. 
+            </p>
+            <p class="text--12">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi ipsum ab harum sequi culpa, perferendis provident corporis aspernatur 
+            </p>
+        </div>
+    </footer>
     <script src="./src/main.js"></script>
 
 </body>

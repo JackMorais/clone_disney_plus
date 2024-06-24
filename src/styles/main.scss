@@ -2,6 +2,10 @@
 @use 'hero';
 @use 'shows';
 @use 'planos';
+@use 'available-devices';
+@use 'faq';
+@use 'footer';
+@use 'header';
 
 @font-face {
     font-family: Avenir;
@@ -20,6 +24,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 
@@ -42,22 +47,50 @@ body{
 
 .text--18{
     @include text(18px);
+
+    @media (max-width: 768px){
+        @include text(15px);
+    }
 }
 .text {
     @include text;
+
+    @media (max-width: 768px){
+        @include text(14px);
+    }
 }
+
 .text--12{
     @include text(12px);
+
+    @media (max-width: 768px){
+        @include text(11px);
+    }
 }
+
 
 .title--44 {
     @include title(44px);
+
+    @media (max-width: 768px){
+        @include title(26px);
+    }
 }
 .title{
     @include title;
+
+    @media (max-width: 768px){
+        @include title(22px);
+    }
+
+    
 }
 .title--40 {
     @include title(40px);
+
+    @media (max-width: 768px){
+        @include title(24px);
+    }
 }
 .link-text{
     @include text(18px);
@@ -66,14 +99,105 @@ body{
 }
 
 .button{
-    display: block;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 60px;
     color: variaveis.$corTextoSecundaria;
     font-size: 18px;
-    background-color: #6421ff;
+    background-color: variaveis.$corBotaoPrimario;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corBotaoPrimario;
+
+    @media (max-width: 768px){
+        width: 100%;
+        align-items: center;
+    }
+
+    &:hover{
+        background-color: lighten(variaveis.$corBotaoPrimario, 3%);
+    }
+
+    &--secondary{
+        background-color: variaveis.$corBotaoSecundario;
+        border-color: variaveis.$corBotaoSecundario;
+
+        &:hover{
+            background-color: lighten(variaveis.$corBotaoSecundario, 3%);
+        }
+    }
+
+    &--dark{
+        background-color: rgba(variaveis.$corBotaoDark, 0.8);
+        border-color: variaveis.$corTextoSecundaria;
+
+        &:hover{
+            background-color: variaveis.$corTextoSecundaria;
+            color: variaveis.$cordeFundo;
+        }
+
+    }
+    
+}
+
+.image-text-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5.6vw;
+    align-items: center;
+
+    @media (max-width: 768px){
+        display: block;
+        align-items: center;
+    }
+
+    img{
+        max-width: 100%;
+    }
+    &__text__container {
+        padding: 0 2vw;
+
+        @media (max-width: 768px){
+            display: block;
+            text-align: center;
+        }
+
+
+        h2{
+            margin-bottom: 24px;
+            margin-top: 24px;
+        }
+    }
+
+    &--image-full-width{
+        display: block;
+        position: relative;
+
+        img{
+            width: 100%;
+        }
+        &__text__container{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: calc(50% - 5.6vw);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media (max-width: 768px){
+                position: relative;
+                left: 0;
+                width: 100%;
+                
+            }
+        }
+    }
+
+
 }
